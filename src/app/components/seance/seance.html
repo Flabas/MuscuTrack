@@ -1,29 +1,29 @@
-<div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-800 flex flex-col items-center justify-center px-4 text-center transition-colors duration-300">
-  <section class="w-full max-w-2xl mt-16 mb-8">
-    <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 p-8">
-      <h1 class="text-3xl font-extrabold text-blue-700 dark:text-blue-400 mb-6 flex items-center gap-2">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-800 flex flex-col items-center justify-center px-2 sm:px-4 text-center transition-colors duration-300">
+  <section class="w-full max-w-2xl mt-10 sm:mt-16 mb-6 sm:mb-8 px-2 sm:px-0">
+    <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 p-4 sm:p-8">
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-blue-700 dark:text-blue-400 mb-6 flex items-center gap-2">
         <span>📝</span> Détail de la séance
       </h1>
       @if (session; as s) {
         <div class="flex flex-col sm:flex-row sm:justify-between items-center mb-6 gap-4">
-          <div class="text-left">
-            <div class="text-lg font-bold text-blue-700 dark:text-blue-400 mb-1">Séance #{{ s.id }}</div>
-            <div class="text-gray-600 dark:text-gray-300 text-base flex items-center gap-2">
+          <div class="text-left w-full sm:w-auto">
+            <div class="text-base sm:text-lg font-bold text-blue-700 dark:text-blue-400 mb-1">Séance #{{ s.id }}</div>
+            <div class="text-gray-600 dark:text-gray-300 text-xs sm:text-base flex items-center gap-2">
               <span class="inline-block w-2 h-2 rounded-full bg-blue-400"></span>
               {{ s.date | date:'dd/MM/yyyy' }}
             </div>
           </div>
-          <div class="bg-blue-100 dark:bg-blue-900 rounded-xl px-6 py-3 flex flex-col items-center border border-blue-200 dark:border-blue-800 min-w-[120px]">
+          <div class="bg-blue-100 dark:bg-blue-900 rounded-xl px-4 sm:px-6 py-3 flex flex-col items-center border border-blue-200 dark:border-blue-800 min-w-[100px] sm:min-w-[120px]">
             <span class="text-xs text-gray-500 dark:text-gray-400">Notes</span>
-            <span class="text-blue-700 dark:text-blue-200 font-semibold">{{ s.notes || 'Aucune note' }}</span>
+            <span class="text-blue-700 dark:text-blue-200 font-semibold text-xs sm:text-base">{{ s.notes || 'Aucune note' }}</span>
           </div>
         </div>
         @if (exercises.length > 0) {
-          <div class="flex items-center justify-between mb-4">
-            <h2 class="text-2xl font-extrabold text-blue-700 dark:text-blue-400 flex items-center gap-2 m-0">
+          <div class="flex flex-col sm:flex-row items-center justify-between mb-4 gap-2 sm:gap-0">
+            <h2 class="text-xl sm:text-2xl font-extrabold text-blue-700 dark:text-blue-400 flex items-center gap-2 m-0">
               <span>🏋️‍♂️</span> Exercices
             </h2>
-            <button (click)="showAddExercise = !showAddExercise" class="flex items-center gap-1 px-3 py-1.5 rounded bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 border border-blue-200 dark:border-blue-800 hover:bg-blue-200 dark:hover:bg-blue-800 transition">
+            <button (click)="showAddExercise = !showAddExercise" class="flex items-center gap-1 px-3 py-1.5 rounded bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 border border-blue-200 dark:border-blue-800 hover:bg-blue-200 dark:hover:bg-blue-800 transition text-xs sm:text-base">
               <mat-icon>add</mat-icon>Ajouter un exercice
             </button>
           </div>
@@ -32,15 +32,15 @@
           }
           <div class="flex flex-col gap-6">
             @for (ex of exercises; track ex.id) {
-              <div class="bg-white dark:bg-gray-800 rounded-xl shadow border border-gray-100 dark:border-gray-700 p-6 flex flex-col gap-2 relative">
+              <div class="bg-white dark:bg-gray-800 rounded-xl shadow border border-gray-100 dark:border-gray-700 p-4 sm:p-6 flex flex-col gap-2 relative">
                 <div class="flex items-center gap-2 mb-1">
                   <span class="inline-block w-2 h-2 rounded-full bg-blue-500"></span>
-                  <span class="text-lg font-bold text-gray-800 dark:text-gray-100">{{ ex.exercise?.name || 'Exercice inconnu' }}</span>
+                  <span class="text-base sm:text-lg font-bold text-gray-800 dark:text-gray-100">{{ ex.exercise?.name || 'Exercice inconnu' }}</span>
                   <span class="ml-2 text-xs px-2 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-200 border border-blue-200 dark:border-blue-800">{{ ex.exercise.muscle_group }}</span>
                 </div>
                 @if (isSetArray(setsBySessionExercise[ex.id])) {
                   <div class="overflow-x-auto rounded-lg">
-                    <table class="w-full text-xs mb-2 border-separate border-spacing-y-1">
+                    <table class="w-full text-xs sm:text-sm mb-2 border-separate border-spacing-y-1">
                       <thead>
                         <tr class="text-left text-blue-700 dark:text-blue-300">
                           <th class="pr-2">Set</th>
@@ -61,7 +61,7 @@
                       </tbody>
                     </table>
                   </div>
-                  <button (click)="toggleAddSet(ex.id)" class="mt-2 self-end flex items-center gap-1 px-3 py-1.5 rounded bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 border border-blue-200 dark:border-blue-800 hover:bg-blue-200 dark:hover:bg-blue-800 transition">
+                  <button (click)="toggleAddSet(ex.id)" class="mt-2 self-end flex items-center gap-1 px-3 py-1.5 rounded bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 border border-blue-200 dark:border-blue-800 hover:bg-blue-200 dark:hover:bg-blue-800 transition text-xs sm:text-base">
                     <mat-icon>add</mat-icon> Ajouter un set
                   </button>
                   @if (showAddSet[ex.id]) {
@@ -69,7 +69,7 @@
                   }
                 } @else {
                   <div class="text-gray-400 italic text-xs">Aucun set</div>
-                  <button (click)="toggleAddSet(ex.id)" class="mt-2 self-end flex items-center gap-1 px-3 py-1.5 rounded bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 border border-blue-200 dark:border-blue-800 hover:bg-blue-200 dark:hover:bg-blue-800 transition">
+                  <button (click)="toggleAddSet(ex.id)" class="mt-2 self-end flex items-center gap-1 px-3 py-1.5 rounded bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 border border-blue-200 dark:border-blue-800 hover:bg-blue-200 dark:hover:bg-blue-800 transition text-xs sm:text-base">
                     <mat-icon>add</mat-icon> Ajouter un set
                   </button>
                   @if (showAddSet[ex.id]) {
@@ -80,7 +80,7 @@
                   <button class="p-1 rounded hover:bg-blue-100 dark:hover:bg-blue-900 transition" title="Modifier l'exercice" (click)="openExerciseForm(ex.exercise.id)">
                     <span class="material-icons text-base">✏️</span>
                   </button>
-                  <button class="p-1 rounded hover:bg-red-100 dark:hover:bg-red-900 transition" title="Supprimer l'exercice" (click)="deleteExercise(ex.id)">
+                  <button class="p-1 rounded hover:bg-red-100 dark:hover:bg-red-900 transition" title="Supprimer l'exercice" (click)="deleteExercise(ex.exercise.id)">
                     <span class="material-icons text-base">🗑️</span>
                   </button>
                 </div>

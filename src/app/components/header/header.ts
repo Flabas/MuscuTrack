@@ -7,14 +7,18 @@ import { Component } from '@angular/core';
   styleUrl: './header.css'
 })
 export class Header {
-  public isConnected = false;
-  public username: string | null = null;
+  showMenu = false;
 
-  constructor() {
-    const token = localStorage.getItem('token');
-    const username = localStorage.getItem('username');
-    this.isConnected = !!token;
-    this.username = username;
+  get isConnected(): boolean {
+    return !!localStorage.getItem('token');
+  }
+
+  get username(): string | null {
+    return localStorage.getItem('username');
+  }
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
   }
 
   logout() {

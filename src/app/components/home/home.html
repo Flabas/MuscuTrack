@@ -1,42 +1,42 @@
 <div
   *ngIf="!isConnected"
-  class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-800 flex flex-col justify-center items-center px-4 text-center transition-colors duration-300"
+  class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-800 flex flex-col justify-center items-center px-2 sm:px-4 text-center transition-colors duration-300"
 >
   <!-- Hero Section -->
-  <section class="max-w-xl mt-24 mb-12">
-    <h1 class="text-5xl font-extrabold text-blue-700 dark:text-blue-400 mb-4 drop-shadow-lg">Suivez vos progrès.<br/>Atteignez vos objectifs.</h1>
-    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">Votre compagnon pour toutes vos séances de musculation. Planifiez, suivez et visualisez vos performances.</p>
+  <section class="w-full max-w-xl mt-16 sm:mt-24 mb-8 sm:mb-12 px-2 sm:px-0">
+    <h1 class="text-3xl sm:text-5xl font-extrabold text-blue-700 dark:text-blue-400 mb-4 drop-shadow-lg">Suivez vos progrès.<br/>Atteignez vos objectifs.</h1>
+    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-8">Votre compagnon pour toutes vos séances de musculation. Planifiez, suivez et visualisez vos performances.</p>
     <a
       routerLink="/register"
-      class="inline-block bg-blue-600 dark:bg-blue-500 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-blue-700 dark:hover:bg-blue-400 transition text-lg font-semibold"
+      class="inline-block bg-blue-600 dark:bg-blue-500 text-white px-6 sm:px-8 py-3 rounded-xl shadow-lg hover:bg-blue-700 dark:hover:bg-blue-400 transition text-base sm:text-lg font-semibold"
     >
       Commencer maintenant
     </a>
   </section>
 
   <!-- Pourquoi utiliser -->
-  <section class="mt-10 max-w-3xl grid gap-8 sm:grid-cols-2">
-    <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 flex flex-col items-center">
-      <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-2">📅 Planifiez vos programmes</h2>
-      <p class="text-gray-600 dark:text-gray-300">Créez et organisez facilement vos séances et programmes.</p>
+  <section class="mt-8 sm:mt-10 w-full max-w-3xl grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 px-2 sm:px-0">
+    <div class="bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+      <h2 class="text-xl sm:text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-2">📅 Planifiez vos programmes</h2>
+      <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base">Créez et organisez facilement vos séances et programmes.</p>
     </div>
-    <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 flex flex-col items-center">
-      <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-2">📈 Suivez vos performances</h2>
-      <p class="text-gray-600 dark:text-gray-300">Notez vos poids, reps et voyez votre progression au fil du temps.</p>
+    <div class="bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+      <h2 class="text-xl sm:text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-2">📈 Suivez vos performances</h2>
+      <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base">Notez vos poids, reps et voyez votre progression au fil du temps.</p>
     </div>
-    <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 flex flex-col items-center">
-      <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-2">💡 Visualisez vos progrès</h2>
-      <p class="text-gray-600 dark:text-gray-300">Des graphiques clairs pour rester motivé et atteindre vos objectifs.</p>
+    <div class="bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+      <h2 class="text-xl sm:text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-2">💡 Visualisez vos progrès</h2>
+      <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base">Des graphiques clairs pour rester motivé et atteindre vos objectifs.</p>
     </div>
-    <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 flex flex-col items-center">
-      <h2 class="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-2">📲 Disponible partout</h2>
-      <p class="text-gray-600 dark:text-gray-300">Accédez à vos données depuis tous vos appareils.</p>
+    <div class="bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+      <h2 class="text-xl sm:text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-2">📲 Disponible partout</h2>
+      <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base">Accédez à vos données depuis tous vos appareils.</p>
     </div>
   </section>
 
   <!-- Inscription rapide -->
-  <section class="mt-16">
-    <p class="text-gray-700 dark:text-gray-200">Vous avez déjà un compte ?
+  <section class="mt-12 sm:mt-16 px-2 sm:px-0">
+    <p class="text-gray-700 dark:text-gray-200 text-sm sm:text-base">Vous avez déjà un compte ?
       <a routerLink="/login" class="text-blue-600 dark:text-blue-400 hover:underline font-semibold">Connectez-vous ici</a>.
     </p>
   </section>
@@ -49,9 +49,9 @@
     </div>
   </ng-container>
   <ng-template #dashboardContent>
-    <div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-800 flex flex-col items-center px-4 text-center transition-colors duration-300">
+    <div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-800 flex flex-col items-center px-2 sm:px-4 text-center transition-colors duration-300">
       <!-- Dashboard résumé -->
-      <section class="w-full max-w-3xl mt-16 mb-8">
+      <section class="w-full max-w-3xl mt-10 sm:mt-16 mb-6 sm:mb-8 px-2 sm:px-0">
         <!-- Messages globaux -->
         <div *ngIf="successMessage" class="bg-green-100 text-green-700 px-4 py-2 rounded mb-4 border border-green-300 text-sm">
           {{ successMessage }}
@@ -69,37 +69,37 @@
           ></app-program-form>
         </div>
         <div class="flex flex-col sm:flex-row sm:justify-between items-center mb-8 gap-4">
-          <div class="text-left">
-            <h1 class="text-3xl font-extrabold text-blue-700 dark:text-blue-400 mb-1">Bienvenue, {{ username || 'utilisateur' }} 👋</h1>
-            <p class="text-gray-600 dark:text-gray-300">Ravi de vous revoir sur MuscuTrack !</p>
+          <div class="text-left w-full sm:w-auto">
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-blue-700 dark:text-blue-400 mb-1">Bienvenue, {{ username || 'utilisateur' }} 👋</h1>
+            <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base">Ravi de vous revoir sur MuscuTrack !</p>
           </div>
-          <div class="flex gap-4">
-            <div class="bg-white dark:bg-gray-900 rounded-xl shadow px-6 py-3 flex flex-col items-center border border-gray-100 dark:border-gray-800">
-              <span class="text-lg font-bold text-blue-600 dark:text-blue-400">{{ programs.length }}</span>
+          <div class="flex gap-2 sm:gap-4 w-full sm:w-auto justify-center sm:justify-end">
+            <div class="bg-white dark:bg-gray-900 rounded-xl shadow px-4 sm:px-6 py-3 flex flex-col items-center border border-gray-100 dark:border-gray-800">
+              <span class="text-base sm:text-lg font-bold text-blue-600 dark:text-blue-400">{{ programs.length }}</span>
               <span class="text-xs text-gray-500 dark:text-gray-400">Programmes</span>
             </div>
-            <div class="bg-white dark:bg-gray-900 rounded-xl shadow px-6 py-3 flex flex-col items-center border border-gray-100 dark:border-gray-800">
-              <span class="text-lg font-bold text-blue-600 dark:text-blue-400">{{ sessions.length }}</span>
+            <div class="bg-white dark:bg-gray-900 rounded-xl shadow px-4 sm:px-6 py-3 flex flex-col items-center border border-gray-100 dark:border-gray-800">
+              <span class="text-base sm:text-lg font-bold text-blue-600 dark:text-blue-400">{{ sessions.length }}</span>
               <span class="text-xs text-gray-500 dark:text-gray-400">Sessions</span>
             </div>
-            <div class="bg-white dark:bg-gray-900 rounded-xl shadow px-6 py-3 flex flex-col items-center border border-gray-100 dark:border-gray-800">
-              <span class="text-lg font-bold text-blue-600 dark:text-blue-400">{{ getLastSessionDate() }}</span>
+            <div class="bg-white dark:bg-gray-900 rounded-xl shadow px-4 sm:px-6 py-3 flex flex-col items-center border border-gray-100 dark:border-gray-800">
+              <span class="text-base sm:text-lg font-bold text-blue-600 dark:text-blue-400">{{ getLastSessionDate() }}</span>
               <span class="text-xs text-gray-500 dark:text-gray-400">Dernière session</span>
             </div>
           </div>
         </div>
-        <div class="flex justify-end mb-4">
-          <button (click)="openProgramForm()" class="bg-blue-600 dark:bg-blue-500 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 dark:hover:bg-blue-400 transition font-semibold flex items-center gap-2" title="Ajouter un programme">
+        <div class="flex flex-col sm:flex-row sm:justify-end mb-4 gap-2 sm:gap-0">
+          <button (click)="openProgramForm()" class="w-full sm:w-auto bg-blue-600 dark:bg-blue-500 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 dark:hover:bg-blue-400 transition font-semibold flex items-center gap-2 justify-center sm:justify-start" title="Ajouter un programme">
             <span class="text-xl">＋</span> Nouveau programme
           </button>
         </div>
         <!-- Programmes en cards -->
-        <div class="grid sm:grid-cols-2 gap-6 mb-12">
-          <div *ngFor="let program of programs" class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 p-6 flex flex-col gap-2 relative group">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
+          <div *ngFor="let program of programs" class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 p-4 sm:p-6 flex flex-col gap-2 relative group">
             <div class="flex items-center justify-between gap-2 mb-2">
               <div class="flex items-center gap-2">
                 <span class="inline-block w-2 h-2 rounded-full bg-blue-500"></span>
-                <span class="text-lg font-bold text-gray-800 dark:text-gray-100">{{ program.name }}</span>
+                <span class="text-base sm:text-lg font-bold text-gray-800 dark:text-gray-100">{{ program.name }}</span>
               </div>
               <div class="flex items-center gap-2 text-xs mb-1">
                 <span class="inline-flex flex-col items-center justify-center w-16 h-8 rounded-full bg-gradient-to-br from-blue-100 via-blue-50 to-white dark:from-blue-900 dark:via-blue-800 dark:to-blue-700 text-blue-700 dark:text-blue-200 font-extrabold shadow border-2 border-blue-200 dark:border-blue-800">
@@ -110,21 +110,20 @@
                 </span>
               </div>
             </div>
-            <div class="text-gray-600 dark:text-gray-300 text-sm mb-2">{{ program.description || 'Aucune description.' }}</div>
+            <div class="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-2">{{ program.description || 'Aucune description.' }}</div>
             <div class="text-xs text-gray-400 dark:text-gray-500 mb-4">Créé le {{ program.created_at | date:'dd/MM/yyyy' }}</div>
-            <!-- Déplacement des icônes d'édition et de suppression en bas à droite de la card -->
             <div class="flex gap-2 justify-end mt-2">
               <button (click)="openProgramForm(program)" class="p-1 rounded hover:bg-blue-100 dark:hover:bg-gray-800" title="Éditer"><span>✏️</span></button>
               <button (click)="deleteProgram(program.id)" class="p-1 rounded hover:bg-red-100 dark:hover:bg-red-900" title="Supprimer"><span>🗑️</span></button>
             </div>
           </div>
-          <div *ngIf="programs.length === 0" class="col-span-2 text-center text-gray-500 dark:text-gray-400 py-8">
+          <div *ngIf="programs.length === 0" class="col-span-1 sm:col-span-2 text-center text-gray-500 dark:text-gray-400 py-8">
             Aucun programme trouvé. <a routerLink="/register" class="text-blue-600 dark:text-blue-400 hover:underline font-semibold">Créez-en un !</a>
           </div>
         </div>
-        <div class="flex justify-between items-center mb-4 mt-12">
-          <h2 class="text-2xl font-extrabold text-blue-700 dark:text-blue-400">Mes Sessions</h2>
-          <button (click)="openSessionForm()" class="bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 dark:hover:bg-blue-400 transition font-semibold flex items-center gap-2" title="Ajouter une session">
+        <div class="flex flex-col sm:flex-row sm:justify-between items-center mb-4 mt-8 sm:mt-12 gap-2 sm:gap-0">
+          <h2 class="text-xl sm:text-2xl font-extrabold text-blue-700 dark:text-blue-400">Mes Sessions</h2>
+          <button (click)="openSessionForm()" class="w-full sm:w-auto bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 dark:hover:bg-blue-400 transition font-semibold flex items-center gap-2 justify-center sm:justify-start" title="Ajouter une session">
             <span class="text-xl">＋</span> Nouvelle session
           </button>
         </div>
@@ -139,19 +138,19 @@
           ></app-session-form>
         </div>
         <!-- Sessions en timeline -->
-        <div class="relative border-l-2 border-blue-200 dark:border-gray-700 pl-8">
-          <div *ngFor="let session of sessions | orderByDate:'desc'; let i = index" class="mb-10 last:mb-0 flex items-start group">
-            <span class="absolute -left-4 top-2 w-6 h-6 rounded-full flex items-center justify-center bg-blue-600 dark:bg-blue-400 text-white font-bold shadow-lg">{{ getProgramName(session.program_id)[0] || '?' }}</span>
-            <div class="bg-white dark:bg-gray-900 rounded-xl shadow px-6 py-4 border border-gray-100 dark:border-gray-800 w-full">
-              <div class="flex justify-between items-center mb-1">
-                <span class="font-semibold text-gray-800 dark:text-gray-100">{{ getProgramName(session.program_id) }}</span>
+        <div class="relative border-l-2 border-blue-200 dark:border-gray-700 pl-4 sm:pl-8">
+          <div *ngFor="let session of sessions | orderByDate:'desc'; let i = index" class="mb-8 sm:mb-10 last:mb-0 flex items-start group">
+            <span class="absolute -left-4 sm:-left-4 top-2 w-6 h-6 rounded-full flex items-center justify-center bg-blue-600 dark:bg-blue-400 text-white font-bold shadow-lg">{{ getProgramName(session.program_id)[0] || '?' }}</span>
+            <div class="bg-white dark:bg-gray-900 rounded-xl shadow px-4 sm:px-6 py-4 border border-gray-100 dark:border-gray-800 w-full">
+              <div class="flex flex-col sm:flex-row sm:justify-between items-center mb-1 gap-2 sm:gap-0">
+                <span class="font-semibold text-gray-800 dark:text-gray-100 text-sm sm:text-base">{{ getProgramName(session.program_id) }}</span>
                 <span class="text-xs text-gray-500 dark:text-gray-400">{{ session.date | date:'dd/MM/yyyy' }}</span>
               </div>
-              <div class="text-gray-600 dark:text-gray-300 text-sm mb-2">{{ session.notes || 'Aucune note.' }}</div>
-              <div class="flex justify-end gap-2">
-                <a [routerLink]="['/seance', session.id]" class="inline-block bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 px-3 py-1 rounded-lg text-xs font-semibold hover:bg-blue-200 dark:hover:bg-blue-700 transition">Voir la session</a>
-                <button (click)="openSessionForm(session)" class="inline-block bg-yellow-100 dark:bg-yellow-800 text-yellow-700 dark:text-yellow-200 px-3 py-1 rounded-lg text-xs font-semibold hover:bg-yellow-200 dark:hover:bg-yellow-700 transition" title="Éditer"><span>✏️</span></button>
-                <button (click)="deleteSession(session.id)" class="inline-block bg-red-100 dark:bg-red-800 text-red-700 dark:text-red-200 px-3 py-1 rounded-lg text-xs font-semibold hover:bg-red-200 dark:hover:bg-red-700 transition" title="Supprimer"><span>🗑️</span></button>
+              <div class="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-2">{{ session.notes || 'Aucune note.' }}</div>
+              <div class="flex flex-col sm:flex-row justify-end gap-2">
+                <a [routerLink]="['/seance', session.id]" class="inline-block bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 px-3 py-1 rounded-lg text-xs font-semibold hover:bg-blue-200 dark:hover:bg-blue-700 transition text-center">Voir la session</a>
+                <button (click)="openSessionForm(session)" class="inline-block bg-yellow-100 dark:bg-yellow-800 text-yellow-700 dark:text-yellow-200 px-3 py-1 rounded-lg text-xs font-semibold hover:bg-yellow-200 dark:hover:bg-yellow-700 transition text-center" title="Éditer"><span>✏️</span></button>
+                <button (click)="deleteSession(session.id)" class="inline-block bg-red-100 dark:bg-red-800 text-red-700 dark:text-red-200 px-3 py-1 rounded-lg text-xs font-semibold hover:bg-red-200 dark:hover:bg-red-700 transition text-center" title="Supprimer"><span>🗑️</span></button>
               </div>
             </div>
           </div>

@@ -1,0 +1,25 @@
+<header class="bg-white dark:bg-gray-900 shadow sticky top-0 z-50 transition-colors">
+  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="/" class="flex items-center space-x-2">
+      <span class="text-2xl font-extrabold text-blue-600 dark:text-blue-400">💪 MuscuTrack</span>
+    </a>
+    <ul class="flex space-x-6 items-center">
+      <li><a href="/" class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition font-semibold">Accueil</a></li>
+      @if (!isConnected) {
+        <li><a href="/login" class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition font-semibold">Login</a></li>
+        <li><a href="/register" class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition font-semibold">Register</a></li>
+      }
+      @if (isConnected) {
+        <li class="flex items-center gap-2">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 font-bold text-lg">
+            {{ username ? username[0].toUpperCase() : '?' }}
+          </span>
+          <span class="text-gray-700 dark:text-gray-200 font-semibold">{{ username }}</span>
+        </li>
+        <li>
+          <button (click)="logout()" class="px-3 py-1 rounded bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-200 border border-red-200 dark:border-red-800 hover:bg-red-200 dark:hover:bg-red-800 transition font-semibold">Déconnexion</button>
+        </li>
+      }
+    </ul>
+  </nav>
+</header>

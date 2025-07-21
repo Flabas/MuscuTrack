@@ -91,7 +91,15 @@
             }
           </div>
         } @else {
-          <div class="text-gray-400 italic mt-8">Aucun exercice pour cette séance.</div>
+          <div class="flex flex-col items-center mt-8 gap-4">
+            <div class="text-gray-400 italic">Aucun exercice pour cette séance.</div>
+            <button (click)="showAddExercise = !showAddExercise" class="flex items-center gap-1 px-3 py-1.5 rounded bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 border border-blue-200 dark:border-blue-800 hover:bg-blue-200 dark:hover:bg-blue-800 transition text-xs sm:text-base">
+              <mat-icon>add</mat-icon>Ajouter un exercice
+            </button>
+            @if (showAddExercise) {
+              <add-exercise-to-session (add)="onAddExercise($event)" />
+            }
+          </div>
         }
       } @else {
         <div class="flex flex-col items-center justify-center min-h-[200px]">
